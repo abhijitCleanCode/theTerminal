@@ -44,7 +44,7 @@ export const SIGNUPUSER = async (request, response) => {
             name,
             avatar: avatar.url,
             email, 
-            password,
+            password: hashedPassword,
             username: username.toLowerCase()
         })
 
