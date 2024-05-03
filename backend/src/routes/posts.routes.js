@@ -15,6 +15,6 @@ router.route("/post").post(
     ]),
     CREATEPOST
     )
-router.route("/get/posts").get(GETALLPOSTS)
+router.route("/").get(GETALLPOSTS)
 
 export default router;
