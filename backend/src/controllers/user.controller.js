@@ -26,26 +26,30 @@ export const SIGNUPUSER = async (request, response) => {
         }
 
         // check for images, avatar
+
+        console.log(request.files);
+
         const avatarLocalPath = request.files?.avatar[0]?.path
-        console.log("backend :: src :: controllers :: user.controller.js :: SIGNUPUSER: ", request.files);
+        console.log("backend :: src :: controllers :: user.controller.js :: SIGNUPUSER: ", request.files?.avatar[0]?.path, avatarLocalPath);
         if (!avatarLocalPath) {
-            return response.status(400).json({ message: "Avatar is required" });
+            return response.status(400).json({ message: "Avatar is required1" });
         }
 
         // upload avatar to cloudinary
         const avatar = await uploadOnCloudinary(avatarLocalPath);
+        console.log("backend :: src :: controllers :: user.controller.js :: avatar :: ", avatar);
 
         if (!avatar) {
-            return response.status(400).json({ message: "Avatar is required" });
+            return response.status(400).json({ message: "Avatar is required2" });
         }
 
         // create the user and save it to db
         const user = await User.create({
             name,
-            avatar: avatar.url,
+            username: username.toLowerCase(),
             email, 
             password: hashedPassword,
-            username: username.toLowerCase()
+            avatar: avatar.url,
         })
 
         // check if user is created and saved to db
