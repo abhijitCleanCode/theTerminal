@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { Container, Header as HeaderComponent, PostCard } from '../components';
 
-useEffect(() => {
-    
-}, [])
-
 const Home = () => {
+    useEffect(() => {
+    
+    }, [])
+
     const posts = useSelector(state => state.post.postData);
 
   return (
