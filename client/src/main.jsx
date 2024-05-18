@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import store from "./store/store.js";
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import { SignUp, Login, Home } from "./pages/index.js";
+import { SignUp, Login, Home, AllPosts } from "./pages/index.js";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />
+      },
+      {
+        path: "/all-posts",
+        element: <AllPosts />
       },
       {
         path: "/api/v1/users/signup",

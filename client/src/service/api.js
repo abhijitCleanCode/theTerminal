@@ -102,9 +102,9 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
             url: value.url,
             data: value.method === 'DELETE' ? '' : body,
             responseType: value.responseType,
-            headers: {
-                authorization: getAccessToken(),
-            },
+            // headers: {
+            //     authorization: getAccessToken(),
+            // },
             TYPE: getType(value, body),
             onUploadProgress: function(progressEvent) {
                 if (showUploadProgress) {
@@ -120,3 +120,5 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
             }
         });
 }
+
+export { API }

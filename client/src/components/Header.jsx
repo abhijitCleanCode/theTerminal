@@ -1,12 +1,9 @@
 import React from 'react'
 
-import Container from './container/Container'
-
 const Header = () => {
     return (
         <header>
-            <Container>
-                <div className="flex flex-col items-center justify-start w-[80%] md:w-full mb-9 gap-[30px]">
+                <div className="flex flex-col items-center justify-start w-full mb-9 gap-[30px]">
                     <h1 className="text-[50px] font-black !font-merriweather text-center">
                         Share via writing, hope you enjoy
                     </h1>
@@ -15,7 +12,6 @@ const Header = () => {
                         enjoy it
                     </p>
                 </div>
-            </Container>
         </header>
     )
 }
