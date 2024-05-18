@@ -38,7 +38,7 @@ export const CREATEPOST = async (request, response) => {
 }
 
 export const GETALLPOSTS = async (request, response) => {
-    const { page = 1, limit = 10 } = request.query;
+    const { page = 1, limit = 8 } = request.query;
 
     try {
         // Calculate skip for pagination
@@ -46,13 +46,14 @@ export const GETALLPOSTS = async (request, response) => {
 
         const posts = await Post.find({})
         .skip(skip)
-        .limit(5);
+        .limit(limit)
+        .lean();
 
         // Get total documents count
-        const total = await MyDataModel.countDocuments({});
+        const total = await Post.countDocuments({});
 
-        return response.status(200).json(posts, total);
+        return response.status(200).json({posts, total});
     } catch (error) {
-        return response.status(500).json({message: "Server error while fetching posts"})
+        return response.status(500).json({message: "Server error while fetching posts", error})
     }
 }
