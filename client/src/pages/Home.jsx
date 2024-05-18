@@ -12,9 +12,6 @@ const Home = () => {
     const currentPage = useSelector(state => state.post.currentPage);
     const totalPage = useSelector(state => state.post.totalPage);
 
-    const [disabledNextButton, setDisabledNextButton] = useState(false);
-    const [disabledPrevButton, setDisabledPrevButton] = useState(true);
-
     useEffect(() => {
         try {
             const totalPage = async () => {

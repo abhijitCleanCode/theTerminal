@@ -41,6 +41,7 @@ const postSlice = createSlice({
     }
 })
 
+// export individually for the use of components
 export const { getPost, setTotalPage, fetchNextPage, fetchPrevPage } = postSlice.actions;
 
 export default postSlice.reducer;

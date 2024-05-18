@@ -8,6 +8,7 @@ import Input from "./Input";
 import Login from "./Login";
 import Header from "./Header";
 import PostCard from "./PostCard";
+import DetailView from "./DetailView";
 
 export {
     Navbar,
@@ -18,5 +19,6 @@ export {
     Input,
     Login,
     Header,
-    PostCard
+    PostCard,
+    DetailView,
 }
