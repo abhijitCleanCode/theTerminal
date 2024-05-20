@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { open, close, logo } from "../assets";
 import Container from "./container/Container";
+import { Button } from "./index";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
@@ -38,7 +39,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className='py-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)] font-poppins bg-[#fafafa]'>
+    <nav className='bg-[#0B1531] py-3 font-poppins h-full w-full rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border'>
         <Container>
           <div className='w-full flex justify-between items-center mx-auto'>
             <Link to="/" className="flex gap-2 justify-center items-center">
@@ -51,12 +52,12 @@ const Navbar = () => {
                 navItems.map((value) =>
                   value.active ? (
                     <li key={value.name} className="font-mono font-semibold cursor-pointer text-lg">
-                      <button
+                      <Button 
                         onClick={() => navigate(value.slug)}
                         className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
                       >
                         {value.name}
-                      </button>
+                      </Button>
                     </li>
                   ) : null
                 )
@@ -65,13 +66,13 @@ const Navbar = () => {
               {
                 authStatus && (
                   <li>
-                    <button>Log out</button>
+                    <Button>Log out</Button>
                   </li>
                 )
               }
 
             </ul>
-            <div className="md:hidden flex flex-1 justify-end items-center">
+            <div className="md:hidden flex flex-1 justify-end items-center z-50">
               <img src={toggle ? open : close} alt="menu" className="w-[28px] h-[28px] object-contain" onClick={() => setToggle(!toggle)} />
 
               <div className={`${!toggle ? "hidden" : "flex"} p-6 bg-[#fafafa] absolute top-20 right-0 mx-4 min-y-2 min-w-[140px] rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] z-20`}>
@@ -80,12 +81,12 @@ const Navbar = () => {
                     navItems.map((value) =>
                       value.active ? (
                         <li key={value.name} className="font-mono font-semibold cursor-pointer text-lg">
-                          <button
+                          <Button
                             onClick={() => navigate(value.slug)}
                             className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
                           >
                             {value.name}
-                          </button>
+                          </Button>
                         </li>
                       ) : null
                     )
@@ -94,7 +95,7 @@ const Navbar = () => {
                   {
                     authStatus && (
                       <li>
-                        <button>Log out</button>
+                        <Button>Log out</Button>
                       </li>
                     )
                   }

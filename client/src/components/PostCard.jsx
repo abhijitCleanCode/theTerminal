@@ -8,10 +8,13 @@ function PostCard({ _id, title, picture }) {
 
   return (
     <Link to={`/post/${_id}`}>
-      <div className="w-full md:w-72 p-4 bg-white rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
-        <img src={picture} alt="featured image" className='w-full h-full object-contain rounded-t-lg' />
+      <div className="pb-2 w-full md:w-72 transform hover:scale-105 transition-transform duration-300 ease-in-out card-neumorphism">
 
-        <h2 className="font-mono font-bold text-xl text-[#424242]">{addEllipses(title, 30)}</h2>
+        <div className="h-3/6 rounded-lg">
+          <img src={picture} alt="featured image" className='w-full h-full object-contain rounded-t-lg' />
+        </div>
+
+        <h2 className="px-4 pt-2 font-mono font-bold text-2xl text-[#C68DCB]">{addEllipses(title, 30)}</h2>
       </div>
     </Link>
   )

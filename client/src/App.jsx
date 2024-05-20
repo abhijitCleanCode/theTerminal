@@ -9,7 +9,7 @@ function App() {
     <>
       <Navbar />
 
-      <main>
+      <main className='bg-[#0B1531] min-h-screen'>
         <Outlet />
       </main>
     </>

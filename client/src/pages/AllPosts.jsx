@@ -10,6 +10,7 @@ const AllPosts = () => {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const allPosts = useSelector(state => state.allPost.allPost);
+  const totalPage = useSelector(state => state.post.totalPage);
 
   const handleInfiniteScroll = () => {
     try {
@@ -30,6 +31,8 @@ const AllPosts = () => {
     try {
       setLoading(true);
       const response = await API.fetchEightPost({ page });
+      console.log("page :: ", page);
+      console.log("totalPage :: ", totalPage);
 
       if (response.isSuccess) {
         dispatch(setPost(response.data.posts));
@@ -41,6 +44,8 @@ const AllPosts = () => {
     }
   }
   useEffect(() => {
+    if (page === totalPage) return 
+
     fetchPost();
   }, [page])
 
@@ -56,6 +61,14 @@ const AllPosts = () => {
                     ))
                 }
             </div>
+
+            {
+              loading && (
+                <div className='m-4 flex justify-center'>
+                  <LoaderComponent />
+                </div>
+              )
+            }
         </Container>
     </div>
   )

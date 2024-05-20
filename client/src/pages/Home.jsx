@@ -61,7 +61,7 @@ const Home = () => {
 
             <div className='w-full py-8'>
                 <Container>
-                    <div className='flex flex-wrap'>
+                    <div className='flex flex-wrap gap-2'>
                         {
                             posts.map((post) => (
                                 <div key={post._id} className='p-2'>
@@ -74,11 +74,9 @@ const Home = () => {
             </div>
 
             <Container className="flex justify-between">
-                <Button onClick={handlePrev}>Prev</Button>
-                {
-                    <p>Displaying page <strong>{currentPage}</strong> of <strong>{totalPage}</strong></p>
-                }
-                <Button onClick={handleNext}>Next</Button>
+                <Button onClick={handlePrev} className='button-neumorphism font-bold'>Prev</Button>
+                    <p className='text-[#CC51D6]'>Displaying page <strong>{currentPage}</strong> of <strong>{totalPage}</strong></p>
+                <Button onClick={handleNext} className='button-neumorphism font-bold'>Next</Button>
             </Container>
 
         </>
