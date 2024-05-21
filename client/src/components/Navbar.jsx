@@ -39,7 +39,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className='bg-[#0B1531] py-3 font-poppins h-full w-full rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border'>
+    <nav className='py-3 font-poppins h-full w-full bg-[#0B1531] border-b-2 border-gray-500'>
         <Container>
           <div className='w-full flex justify-between items-center mx-auto'>
             <Link to="/" className="flex gap-2 justify-center items-center">
@@ -54,7 +54,8 @@ const Navbar = () => {
                     <li key={value.name} className="font-mono font-semibold cursor-pointer text-lg">
                       <Button 
                         onClick={() => navigate(value.slug)}
-                        className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
+                        bgColor=""
+                        textColor="text-[#C68DCB]"
                       >
                         {value.name}
                       </Button>
