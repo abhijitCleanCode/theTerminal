@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { motion } from "framer-motion";
 import { getPost, setTotalPage, fetchNextPage, fetchPrevPage } from '../store/postSlice';
 
 import { Container, Header as HeaderComponent, PostCard, Loader as LoaderComponent, Button } from '../components';
+import { StarsCanvas } from '../components/canvas';
 import { API } from '../service/api';
 
 const Home = () => {
@@ -57,7 +59,10 @@ const Home = () => {
 
     return !loader ? (
         <>
-            <HeaderComponent />
+            <div className='relative z-0'>
+                <HeaderComponent />
+                <StarsCanvas />
+            </div>
 
             <div className='w-full py-8'>
                 <Container>
@@ -75,7 +80,7 @@ const Home = () => {
 
             <Container className="flex justify-between">
                 <Button onClick={handlePrev} className='button-neumorphism font-bold'>Prev</Button>
-                    <p className='text-[#CC51D6]'>Displaying page <strong>{currentPage}</strong> of <strong>{totalPage}</strong></p>
+                <p className='text-[#CC51D6]'>Displaying page <strong>{currentPage}</strong> of <strong>{totalPage}</strong></p>
                 <Button onClick={handleNext} className='button-neumorphism font-bold'>Next</Button>
             </Container>
 
