@@ -38,7 +38,7 @@ export const CREATEPOST = async (request, response) => {
 }
 
 export const GETALLPOSTS = async (request, response) => {
-    const { page = 1, limit = 8 } = request.query;
+    const { page = 1, limit = 6 } = request.query;
 
     try {
         // Calculate skip for pagination

@@ -17,6 +17,11 @@ const Navbar = () => {
       active: true
     },
     {
+     name: "Features",
+     slug: "/",
+     active: true,
+    },
+    {
       name: "All Posts",
       slug: "/all-posts",
       active: true,
@@ -44,7 +49,7 @@ const Navbar = () => {
           <div className='w-full flex justify-between items-center mx-auto'>
             <Link to="/" className="flex gap-2 justify-center items-center">
               <img src={logo} className="w-9 h-9 object-contain" />
-              <p className='text-xl text-cyan-500 font-bold cursor-pointer flex'>Spectacles</p>
+              <p className='text-2xl blue-text-gradient font-bold cursor-pointer'>Spectacles</p>
             </Link>
 
             <ul className='list-none hidden md:flex gap-10'>
@@ -55,7 +60,7 @@ const Navbar = () => {
                       <Button 
                         onClick={() => navigate(value.slug)}
                         bgColor=""
-                        textColor="text-[#C68DCB]"
+                        textColor="text-gray-300"
                       >
                         {value.name}
                       </Button>
@@ -87,7 +92,7 @@ const Navbar = () => {
                           <Button
                             onClick={() => navigate(value.slug)}
                             bgColor=""
-                            textColor="text-[#C68DCB]"
+                            textColor="text-gray-300"
                           >
                             {value.name}
                           </Button>

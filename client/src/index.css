@@ -2,16 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+.night-mode {
+  background: linear-gradient(45deg, #070d2b, #000312)
+}
+
 .card-neumorphism {
-    border-radius: 11px;
-    background: linear-gradient(145deg, #313a5b, #273050, #1e2746, #151e3b, #0b1531);
-    box-shadow: 23px 23px 45px #000000,
-        -23px -23px 45px #0B1531;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #313a5b, #273050, #1e2746, #151e3b, #0b1531);
+  box-shadow: 23px 23px 45px #000000,
+    -23px -23px 45px #0B1531;
 }
 
 .button-neumorphism {
-    border-radius: 50px;
-    background: linear-gradient(315deg, #602EA6, #C977D6);
-    box-shadow: 20px 20px 33px #000000,
-        -20px -20px 33px #0B1531;
+  border-radius: 50px;
+  background: linear-gradient(315deg, #602EA6, #C977D6);
+  box-shadow: 20px 20px 33px #000000,
+    -20px -20px 33px #0B1531;
+}
+
+.blue-text-gradient {
+  /* background: -webkit-linear-gradient(#eee, #333); */
+  background: #56ccf2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top,
+      #2f80ed,
+      #56ccf2);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,
+      #2f80ed,
+      #56ccf2);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pink-text-gradient {
+  background: #ec008c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top,
+      #ec008c,
+      #fc6767);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,
+      #ec008c,
+      #fc6767);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.violet-text-gradient {
+  background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.green-pink-gradient {
+  background: "#00cea8";
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }

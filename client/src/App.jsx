@@ -9,7 +9,7 @@ function App() {
     <>
       <Navbar />
 
-      <main className='bg-[#0B1531] min-h-screen'>
+      <main className='night-mode min-h-screen'>
         <Outlet />
       </main>
     </>

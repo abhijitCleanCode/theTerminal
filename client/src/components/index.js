@@ -9,6 +9,8 @@ import Login from "./Login";
 import Header from "./Header";
 import PostCard from "./PostCard";
 import DetailView from "./DetailView";
+import Features from "./Features";
+import Articles from "./Articles";
 
 export {
     Navbar,
@@ -21,4 +23,6 @@ export {
     Header,
     PostCard,
     DetailView,
+    Features,
+    Articles,
 }
