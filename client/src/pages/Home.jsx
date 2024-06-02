@@ -1,4 +1,4 @@
-import { Header as HeaderComponent, Features as FeaturesComponent, Articles as ArticlesComponent } from '../components';
+import { Header as HeaderComponent, Features as FeaturesComponent, Articles as ArticlesComponent, CTA } from '../components';
 import { StarsCanvas } from '../components/canvas';
 
 const Home = () => {
@@ -12,6 +12,8 @@ const Home = () => {
             <FeaturesComponent />
 
             <ArticlesComponent />
+
+            <CTA />
         </>
     )
 }

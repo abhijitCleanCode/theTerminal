@@ -11,6 +11,9 @@ import PostCard from "./PostCard";
 import DetailView from "./DetailView";
 import Features from "./Features";
 import Articles from "./Articles";
+import CTA from "./CTA";
+
+import Menu from "./DropDown";
 
 export {
     Navbar,
@@ -25,4 +28,6 @@ export {
     DetailView,
     Features,
     Articles,
+    CTA,
+    Menu,
 }

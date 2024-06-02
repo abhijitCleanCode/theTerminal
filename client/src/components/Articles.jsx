@@ -57,7 +57,7 @@ const Articles = () => {
     }
 
     return !loader ? (
-        <article>
+        <article className='mb-16'>
             <Container className='mt-8'>
             <h2 className='violet-text-gradient font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]'>Tech Time Wrap</h2>
             <p className='text-2xl font-black w-[78%] leading-[35px] text-gray-300'>How Innovation is Shaping Our Future (Already)</p>
@@ -76,7 +76,7 @@ const Articles = () => {
 
             <div className='w-full py-8'>
                 <Container>
-                    <div className='flex flex-wrap gap-2'>
+                    <div className='flex flex-wrap justify-center items-center gap-2'>
                         {
                             posts.map((post) => (
                                 <div key={post._id} className='p-2'>
