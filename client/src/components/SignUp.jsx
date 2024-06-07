@@ -20,18 +20,18 @@ function Signup() {
 
   return !loading ? (
     <div className="flex items-center justify-center">
-      <div className={`mx-auto w-full max-w-lg rounded-md p-10 card-neumorphism`}>
+      <div className={`mx-auto w-full max-w-2xl rounded-[30px] p-10 card-neumorphism`}>
         <div className="mb-2 flex gap-2 justify-center items-center">
           <img src={logo} className="w-9 h-9 object-contain" />
           <p className='text-2xl blue-text-gradient font-bold cursor-pointer flex'>Spectacles</p>
         </div>
 
-        <h2 className="text-center text-2xl font-bold leading-tight text-[#DC7364]">Sign up to create account</h2>
+        <h2 className="text-center text-2xl font-bold text-gray-300 uppercase tracking-wider">Join Our Community</h2>
         <p className="mt-2 text-center text-base text-[#DC7364]">
           Already have an account?&nbsp;
           <Link
             to="/login"
-            className="font-medium text-primary transition-all duration-200 hover:underline text-[#FDB05C]"
+            className="font-medium transition-all duration-200 hover:underline text-[#FDB05C]"
           >
             Sign In
           </Link>
@@ -39,11 +39,11 @@ function Signup() {
 
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
-        <form method="post" onSubmit={handleSubmit(create)}>
+        <form method="post" onSubmit={handleSubmit(create)} className='mt-12 flex flex-col gap-8'>
           <div className="space-y-5">
             <Input
-              label="Name: "
-              placeholder="Enter your name"
+              label="Your Name"
+              placeholder="What's your good name"
               {
               ...register("name", {
                 required: true
@@ -51,8 +51,8 @@ function Signup() {
               }
             />
             <Input
-              label="Email"
-              placeholder="Enter your email"
+              label="Your Email"
+              placeholder="What's your web address"
               type="email"
               {
               ...register("email", {
@@ -74,7 +74,7 @@ function Signup() {
               })
               }
             />
-            <Button type='submit' className='w-full hover:bg-[#624D77]' bgColor='bg-[#926C9A]'>Sign up</Button>
+            <Button type='submit' className='w-full'>Sign up</Button>
           </div>
         </form>
 

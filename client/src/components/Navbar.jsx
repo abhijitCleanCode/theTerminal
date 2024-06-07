@@ -33,7 +33,7 @@ const Navbar = () => {
     },
     {
       name: "Connect",
-      slug: "/add-post",
+      slug: "/connect",
       active: true,
     },
   ]

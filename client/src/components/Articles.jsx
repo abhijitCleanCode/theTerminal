@@ -59,19 +59,14 @@ const Articles = () => {
     return !loader ? (
         <article className='mb-16'>
             <Container className='mt-8'>
-            <h2 className='violet-text-gradient font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]'>Tech Time Wrap</h2>
-            <p className='text-2xl font-black w-[78%] leading-[35px] text-gray-300'>How Innovation is Shaping Our Future (Already)</p>
+                <h2 className='violet-text-gradient font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]'>Tech Time Wrap</h2>
+                <p className='text-2xl font-black w-[78%] leading-[35px] text-gray-300'>How Innovation is Shaping Our Future (Already)</p>
             </Container>
 
-            <div className='relative max-w-xl mx-auto mt-8'>
-                <picture>
-                    <img className="h-64 w-full object-cover rounded-md" src={sarvagyaArticles} alt="Random image" />
-                </picture>
-                <div className="absolute inset-0 bg-gray-700 opacity-60 rounded-md"></div>
-
-                <div className="absolute inset-0 flex items-center justify-center text-center text-gray-300 font-black text-xl md:text-2xl">
+            <div className="pt-8 flex justify-center items-center">
+                <h3 className=" border-b-2 border-[#00cea8] flex items-center justify-center text-center violet-text-gradient font-black text-xl md:text-2xl">
                     Some Of Our Most Impactful Stories
-                </div>
+                </h3>
             </div>
 
             <div className='w-full py-8'>

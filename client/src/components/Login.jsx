@@ -18,13 +18,13 @@ function Login() {
 
   return !loading ? (
     <div className='flex items-center justify-center w-full'>
-      <div className={`mx-auto w-full max-w-lg rounded-md p-10 card-neumorphism`}>
+      <div className={`mx-auto w-full max-w-2xl rounded-[30px] p-10 card-neumorphism`}>
         <div className="mb-2 flex gap-2 justify-center items-center">
           <img src={logo} className="w-9 h-9 object-contain" />
           <p className='text-2xl blue-text-gradient font-bold cursor-pointer'>Spectacles</p>
         </div>
 
-        <h2 className="text-center text-2xl font-bold leading-tight text-[#DC7364]">Sign in to your account</h2>
+        <h2 className="text-center text-2xl font-bold text-gray-300 uppercase tracking-wider">We'r happy to have you on board</h2>
         <p className="mt-2 text-center text-base text-[#DC7364]">
           Don&apos;t have any account?&nbsp;
           <Link
@@ -63,7 +63,7 @@ function Login() {
               })
               }
             />
-            <Button type='submit' className='w-full hover:bg-[#624D77]' bgColor='bg-[#926C9A]'>Sign in</Button>
+            <Button type='submit' className='w-full'>Sign in</Button>
           </div>
         </form>
 
