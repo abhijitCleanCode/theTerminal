@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { open, close, logo } from "../assets";
 import Container from "./container/Container";
-import { Button, Menu } from "./index";
+import { Button } from "./index";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
@@ -14,17 +14,20 @@ const Navbar = () => {
     {
       name: 'Home',
       slug: "/",
-      active: true
+      active: true,
+      bgColor: ""
     },
     {
       name: "Features",
-      slug: "/",
+      slug: "#features",
       active: true,
+      bgColor: ""
     },
     {
       name: "Get to Know",
       slug: "/all-posts",
       active: true,
+      bgColor: ""
     },
     {
       name: "Add Post",
@@ -35,19 +38,20 @@ const Navbar = () => {
       name: "Connect",
       slug: "/connect",
       active: true,
+      bgColor: ""
     },
-  ]
-
-  const personalize = [
     {
       name: "Login",
       slug: "/api/v1/users/login",
       active: !authStatus,
+      bgColor: "bg-[#3395FF]"
     },
     {
       name: "Signup",
       slug: "/api/v1/users/signup",
       active: !authStatus,
+      bgColor: "",
+      className: "border-2 border-[#3395FF]"
     },
   ]
 
@@ -67,8 +71,9 @@ const Navbar = () => {
                   <li key={value.name} className="font-mono font-semibold cursor-pointer text-lg">
                     <Button
                       onClick={() => navigate(value.slug)}
-                      bgColor=""
+                      bgColor={value.bgColor}
                       textColor="text-gray-300"
+                      className={value.className}
                     >
                       {value.name}
                     </Button>
@@ -77,7 +82,6 @@ const Navbar = () => {
               )
             }
 
-            <Menu menuButtonText="Personalize" itemArray={personalize} />
 
             {
               authStatus && (
@@ -113,7 +117,9 @@ const Navbar = () => {
                   )
                 }
 
-                <Menu menuButtonText="Personalize" itemArray={personalize} />
+                <Link to="/api/v1/users/login" className="font-medium transition-all duration-200 hover:underline text-[#FDB05C]">
+                  <Button>Login</Button>
+                </Link>
 
                 {
                   authStatus && (

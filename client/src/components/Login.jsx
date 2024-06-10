@@ -6,11 +6,12 @@ import { Button, Input, Loader } from "./index.js";
 import { logo } from '../assets/index.js';
 
 function Login() {
-  const [ loading, setLoading ] = useState(false)
+  const { register, handleSubmit, formState } = useForm();
+  const { errors } = formState;
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { register, handleSubmit } = useForm();
 
   const login = async (data) => {
     console.log("User login successful");
@@ -25,10 +26,10 @@ function Login() {
         </div>
 
         <h2 className="text-center text-2xl font-bold text-gray-300 uppercase tracking-wider">We'r happy to have you on board</h2>
-        <p className="mt-2 text-center text-base text-[#DC7364]">
+        <p className="mt-2 text-center text-base text-red-400">
           Don&apos;t have any account?&nbsp;
           <Link
-            to="/signup"
+            to="/api/v1/users/signup"
             className="font-medium text-primary transition-all duration-200 text-[#FDB05C] hover:underline"
           >
             Sign Up
@@ -39,31 +40,45 @@ function Login() {
 
         <form method='post' onSubmit={handleSubmit(login)}>
           <div className="space-y-5">
-            <Input
-              label="Email"
-              placeholder="Enter your email"
-              type="email"
-              {
-              ...register("email", {
-                required: true,
-                validate: {
-                  matchPattern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
-                    "Email address must be a valid address"
+
+            <div>
+              <Input
+                label="Your Email"
+                placeholder="What's your web address"
+                type="email"
+                {
+                ...register("email", {
+                  required: {
+                    value: true,
+                    message: "Email is required"
+                  },
+                  pattern: {
+                    value: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+                    message: "Please enter a valid email address"
+                  }
+                })
                 }
-              })
-              }
-            />
-            <Input
-              label="Password:"
-              placeholder="Enter your password"
-              type="password"
-              {
-              ...register("password", {
-                required: true
-              })
-              }
-            />
-            <Button type='submit' className='w-full'>Sign in</Button>
+              />
+              <p className='text-center text-red-400'>{errors.email?.message}</p>
+            </div>
+
+            <div>
+              <Input
+                label="Your Password"
+                placeholder="Enter your password"
+                type="password"
+                {
+                ...register("password", {
+                  required: {
+                    value: true,
+                    message: "Password is required"
+                  }
+                })
+                }
+              />
+              <p className='text-center text-red-400'>{errors.password?.message}</p>
+            </div>
+            <Button type='submit' className='w-full'>Login</Button>
           </div>
         </form>
 
@@ -75,3 +90,6 @@ function Login() {
 }
 
 export default Login
+
+// When form is submitted, handleSubmit event is fired
+// handleSubmit is method which takes method as input which specify how form is handle

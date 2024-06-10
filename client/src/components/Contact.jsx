@@ -54,6 +54,10 @@ const Contact = () => {
               className='bg-[#0B1531] py-4 px-6 placeholder:text-gray-300 text-white rounded-[15px] outline-none border-none font-medium'
             />
           </label>
+
+          <button type="submit" className='bg-[#151030] py-3 px-8 rounded-[15px] outline-none w-fit text-white font-bold shadow-md shadow-primary'>
+            Send
+          </button>
         </form>
       </div>
     </div>

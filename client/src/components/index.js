@@ -16,7 +16,7 @@ import Contact from "./Contact";
 
 import Input from "./Input";
 import Button from "./Button";
-import Menu from "./DropDown";
+// import Menu from "./DropDown";
 
 export {
     Navbar,
@@ -32,6 +32,6 @@ export {
     Features,
     Articles,
     CTA,
-    Menu,
+    // Menu,
     Contact,
 }

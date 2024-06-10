@@ -14,7 +14,7 @@ const ServiceCard = ({ title }) => (
 
 const Features = () => {
     return (
-        <div className='bg-[#0B1531] shadow rounded-[30px] p-8'>
+        <div className='bg-[#0B1531] shadow rounded-[30px] p-8' id='features'>
             <h1 className='violet-text-gradient font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]'>What we offer</h1>
             <div className='py-8 grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <ServiceCard title="Know the core"/>
