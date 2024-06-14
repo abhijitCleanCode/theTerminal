@@ -15,11 +15,12 @@ const ServiceCard = ({ title }) => (
 const Features = () => {
     return (
         <div className='bg-[#0B1531] shadow rounded-[30px] p-8' id='features'>
-            <h1 className='violet-text-gradient font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]'>What we offer</h1>
+            <h3 className='text-2xl font-black w-[78%] leading-[35px] text-gray-300'>What do we do</h3>
+            <h1 className='violet-text-gradient font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]'>We Turn Stories into Code</h1>
             <div className='py-8 grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <ServiceCard title="Know the core"/>
                 <ServiceCard title="Level Up"/>
-                <ServiceCard title="Stay Ahead"/>
+                <ServiceCard title="Dev"/>
                 <ServiceCard title="Test Us"/>
             </div>
         </div>

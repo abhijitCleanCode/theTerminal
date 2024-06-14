@@ -59,8 +59,8 @@ const Articles = () => {
     return !loader ? (
         <article className='mb-16'>
             <Container className='mt-8'>
+                <p className='text-2xl font-black w-[78%] leading-[35px] text-gray-300'>How Innovation is Shaping Our Future</p>
                 <h2 className='violet-text-gradient font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]'>Tech Time Wrap</h2>
-                <p className='text-2xl font-black w-[78%] leading-[35px] text-gray-300'>How Innovation is Shaping Our Future (Already)</p>
             </Container>
 
             <div className="pt-8 flex justify-center items-center">

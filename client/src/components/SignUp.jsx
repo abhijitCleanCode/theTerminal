@@ -104,7 +104,7 @@ function Signup() {
                 ...register("confirmPassword", {
                   required: {
                     value: true,
-                    message: "Confirm password is required"
+                    message: "Confirm your password"
                   },
                   validate: {
                     validatePasswordMatch: (fieldValue) => (

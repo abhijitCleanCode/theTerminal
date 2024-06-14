@@ -13,10 +13,12 @@ import Features from "./Features";
 import Articles from "./Articles";
 import CTA from "./CTA";
 import Contact from "./Contact";
+import KnowCore from "./KnowCore";
+import Dev from "./Dev";
+import LevelUp from "./LevelUp";
 
 import Input from "./Input";
 import Button from "./Button";
-// import Menu from "./DropDown";
 
 export {
     Navbar,
@@ -32,6 +34,9 @@ export {
     Features,
     Articles,
     CTA,
-    // Menu,
     Contact,
+
+    KnowCore,
+    Dev,
+    LevelUp,
 }

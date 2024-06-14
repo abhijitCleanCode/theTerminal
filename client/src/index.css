@@ -13,11 +13,11 @@
     -23px -23px 45px #0B1531;
 }
 
-.button-neumorphism {
+.nav-neumorphism {
   border-radius: 50px;
-  background: linear-gradient(315deg, #602EA6, #C977D6);
-  box-shadow: 20px 20px 33px #000000,
-    -20px -20px 33px #0B1531;
+  background: linear-gradient(145deg, #070d2b, #000312);
+  box-shadow:  20px 20px 60px #1e2746,
+               -20px -20px 60px #151e3b;
 }
 
 .blue-text-gradient {
