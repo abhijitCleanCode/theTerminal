@@ -15,7 +15,7 @@ import CTA from "./CTA";
 import Contact from "./Contact";
 import KnowCore from "./KnowCore";
 import Dev from "./Dev";
-import LevelUp from "./LevelUp";
+import Project from "./Project";
 
 import Input from "./Input";
 import Button from "./Button";
@@ -38,5 +38,5 @@ export {
 
     KnowCore,
     Dev,
-    LevelUp,
+    Project,
 }

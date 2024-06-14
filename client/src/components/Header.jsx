@@ -7,7 +7,7 @@ const Header = () => {
                     <h1 className="text-[50px] font-black !font-merriweather text-center pink-text-gradient">
                         The Future is You, Just Realize it
                     </h1>
-                    <p className="text-2xl font-black w-[78%] text-center leading-[35px] blue-text-gradient">
+                    <p className="text-2xl font-bold w-[78%] text-center blue-text-gradient">
                         Make It Happen
                     </p>
                 </div>
